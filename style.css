@@ -1,0 +1,132 @@
+/***** Reiniciando estilos iniciales *****/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Roboto', monospace;
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+}
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/***** Variables *****/
+:root {
+  --dk : #0c1e25;
+  --dm : #1b343e;
+  --md : #285b63;
+  --lm : #3f7d84;
+  --lt : #559ea0;
+}
+/***** Seccion de encabezado *****/
+.header {
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 5px double var(--dk);
+}
+.header__title {
+  font-size: 3rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 5px 0;
+  
+}
+.header__anchor {
+  text-decoration: none;
+  color: var(--dk);
+}
+.header__anchor:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/***** Estilo principal del grid container *****/
+.grid-container {
+  width: 100%;  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  /* grid-template-rows: max-content; */
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 20px;
+}
+/***** Estilos de las tarjetas *****/
+.card {
+  width: 100%;
+  border: 2px solid var(--dm);
+  border-radius: 20px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card__title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--dk);
+  align-self: flex-start;
+}
+.card__img-container {
+  width: 80%;
+  margin-bottom: 10px;
+}
+.card__img {
+  width: 100%;
+}
+.card__text {
+  font-size: 1.6rem;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.card__button {
+  border: 2px solid var(--dk);
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: var(--lm);
+  color: var(--dk);
+  border-radius: 10px;
+}
+.card__button:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transform: scale(1.1);
+}
+/***** Sección de cursos *****/
+.courses, .challenges {
+  width: 100%;
+  background-color: var(--lt);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 5px double var(--dk);
+}
+.grid-courses__title, .grid-challenges__title {
+  width: 90%;
+  font-size: 2.8rem;
+  color: var(--dk);
+  text-align: center;
+  border-bottom: 1px solid var(--dk);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+/***** Footer *****/
+footer {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: var(--dm);
+}
+footer p {
+  color: var(--lt);
+  font-size: 1.6rem;
+}

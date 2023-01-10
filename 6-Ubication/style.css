@@ -1,0 +1,53 @@
+.container {
+  background-color: papayawhip;
+  display: grid;
+  grid-template: 
+    "card-1 card-2" 60px
+    "card-1 card-3" 60px /
+    60px    60px;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px 0;
+}
+.item {
+  border-radius: 5px;
+}
+.item-1 {
+  background-color: hotpink;
+  grid-area: card-1;
+}
+.item-2 {
+  background-color: #69dcd1;
+  grid-area: card-2;
+}
+.item-3 {
+  background-color: #f1847b;
+  grid-area: card-3;
+}
+.container2 {
+  margin-top: 10px;
+  background-color: papayawhip;
+  display: grid;
+  grid-template: 
+    "card-1 card-2" 60px
+    "card-3 card-3" 60px /
+    60px    60px;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px 0;
+}
+.item {
+  border-radius: 5px;
+}
+.item-4 {
+  background-color: gold;
+  grid-area: card-1;
+}
+.item-5 {
+  background-color: #e9bba8;
+  grid-area: card-2;
+}
+.item-6 {
+  background-color: red;
+  grid-area: card-3;
+}

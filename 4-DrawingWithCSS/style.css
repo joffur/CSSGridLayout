@@ -1,0 +1,427 @@
+:root {
+  --skin: #f6c09c;
+  --eye: #ffffff;
+  --beard: #00243a;
+  --mouth: #680524;
+  --tongue: #ed2860;
+  --ears: #ed927d;
+  --ears-shadow: #ea686c;
+  --background: #ed4042;
+  --head-shadow: #f4b196;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-container {
+  width: 90%;
+  height: 350px;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr; /* row / column */
+}
+
+.first-container, 
+.second-container,
+.third-container {
+  justify-self: center;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.first-container .head, 
+.second-container .head,
+.third-container .head {
+  background-color: var(--skin);
+  width: 130px;
+  height: 200px;
+  border-radius: 65px;
+  position: relative;
+}
+
+.first-container .eyebrow {
+  background-color: var(--skin);
+  width: 80px;
+  height: 15px;
+  position: absolute;
+  left: 22px;
+  top: 50px;
+  z-index: 1;
+}
+
+.first-container .eye-left,
+.second-container .eye-left {
+  background-color: var(--eye);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  left: 32px;
+  top: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.first-container .eye-right,
+.second-container .eye-right {
+  background-color: var(--eye);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  left: 62px;
+  top: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-container .iris-left, 
+.first-container .iris-right, 
+.second-container .iris-left, 
+.second-container .iris-right {
+  background-color: var(--beard);
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.first-container .nose {
+  background-color: var(--skin);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  left: 45px;
+  top: 85px;
+  z-index: 2;
+}
+
+.first-container .beard {
+  background-color: var(--beard);
+  width: 130px;
+  height: 150px;
+  border-radius: 40px 40px 63px 63px;
+  position: absolute;
+  bottom: -50px;
+}
+
+.first-container .mouth {
+  background-color: var(--mouth);
+  width: 60px;
+  height: 35px;
+  border-radius: 0 0 70px 70px;
+  position: absolute;
+  left: 35px;
+  top: 140px;
+  overflow: hidden;
+}
+
+.first-container .teeth {
+  background-color: var(--eye);
+  width: 60px;
+  height: 15px;
+  border-radius: 5px;
+  position: absolute;
+  left: -15px;
+  top: -4px;
+}
+
+.first-container .tongue {
+  background-color: var(--tongue);
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  position: absolute;
+  left: -30px;
+  bottom:-12px;
+}
+
+.first-container .neck,
+.second-container .neck,
+.third-container .neck {
+  background-color: var(--ears);
+  width: 90px;
+  height: 70px;
+  left: 20px;
+  top: 200px;
+  position: absolute;
+  z-index: -1;
+}
+
+.first-container .ear-left,
+.second-container .ear-left,
+.third-container .ear-left {
+  background-color: var(--ears);
+  width: 40px;
+  height: 30px;
+  border-radius: 15px;
+  position: absolute;
+  left: -20px;
+  top: 80px;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-container .ear-right,
+.second-container .ear-right,
+.third-container .ear-right {
+  background-color: var(--ears);
+  width: 40px;
+  height: 30px;
+  border-radius: 15px;
+  position: absolute;
+  top: 80px;
+  left: 110px;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-container .ear-left-shadow-first {
+  background-color: var(--ears-shadow);
+  width: 15px;
+  height: 5px;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 5px;
+  border-radius: 2.5px;
+}
+
+.first-container .ear-left-shadow-second {
+  background-color: var(--ears-shadow);
+  width: 15px;
+  height: 5px;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 5px;
+  border-radius: 2.5px;
+}
+
+.first-container .ear-right-shadow-first {
+  background-color: var(--ears-shadow);
+  width: 15px;
+  height: 5px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 5px;
+  border-radius: 2.5px;
+}
+
+.first-container .ear-right-shadow-second {
+  background-color: var(--ears-shadow);
+  width: 15px;
+  height: 5px;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 5px;
+  border-radius: 2.5px;
+}
+
+.second-container .head-shadow,
+.third-container .head-shadow {
+  background-color: var(--head-shadow);
+  width: 130px;
+  height: 220px;
+  border-radius: 65px;
+  position: relative;
+}
+
+.second-container .head,
+.third-container .head {
+  height: 190px;
+}
+
+.second-container .nose {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50px;
+  top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+.second-container .nose .nostril-left {
+  background-color: var(--ears);
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin-right: 8px;
+  position: relative;
+}
+
+.second-container .nose .nostril-right {
+  background-color: var(--ears);
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.second-container .mouth {
+  background-color: var(--beard);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 70px;
+  top: 115px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.second-container .mouth .teeth {
+  background-color: var(--eye);
+  width: 60px;
+  height: 15px;
+  border-radius: 5px;
+  position: absolute;
+  left: -40px;
+  top: -4px;
+}
+
+.second-container .mouth .tongue {
+  background-color: var(--tongue);
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  position: absolute;
+  left: -45px;
+  bottom:-17px;
+}
+
+.second-container .ear-left .ear-shadow, 
+.second-container .ear-right .ear-shadow {
+  background-color: var(--ears-shadow);
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+}
+
+.third-container .eyebrows {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.third-container .eyebrows .eyebrow-left,
+.third-container .eyebrows .eyebrow-right {
+  background-color: var(--ears-shadow);
+  width: 20px;
+  height: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.third-container .eyes {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.third-container .eyes .eye-left,
+.third-container .eyes .eye-right {
+  background-color: var(--beard);
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.third-container .nose {
+  background-color: var(--ears);
+  width: 32px;
+  height: 45px;
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  border-radius: 50% 50% 0 0;
+}
+
+.third-container .nostril {
+  background-color: var(--ears-shadow);
+  width: 50px;
+  height: 10px;
+  position: absolute;
+  border-radius: 5px;
+  top: 70px;
+  left: 41px;
+}
+
+.third-container .mouth {
+  background-color: var(--beard);
+  width: 60px;
+  height: 90px;
+  border-radius: 0 0 70px 70px;
+  position: absolute;
+  left: 35px;
+  top: 90px;
+  overflow: hidden;
+}
+
+.third-container .teeth {
+  background-color: var(--eye);
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  left: -35px;
+  top: -8px;
+}
+
+.third-container .mouth .tongue {
+  background-color: var(--tongue);
+  width: 60px;
+  height: 70px;
+  border-radius: 10px;
+  position: absolute;
+  left: -20px;
+  bottom:-12px;
+}
+
+.third-container .mouth .tongue-top {
+  background-color: var(--tongue);
+  width: 60px;
+  height: 15px;
+  border-radius: 10px;
+  position: absolute;
+  left: -15px;
+  bottom: 43px;
+}
+
+.third-container .mouth .tongue-rest {
+  background-color: var(--beard);
+  width: 60px;
+  height: 70px;
+  border-radius: 10px;
+  position: absolute;
+  left: 25px;
+  bottom: -27px;
+}
